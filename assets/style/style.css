@@ -7,3 +7,30 @@ body{
 .title-font{
     font-family: 'Caveat', cursive;
 }
+
+.jot-body{
+    font-family: 'Caveat', cursive;
+    background-color: #f7e4ce;
+    min-height: 20em;
+    min-width: 20em;
+    margin: 1em;
+    font-weight: 100;
+}
+
+.jot-cont{
+    background-color: #ff000031;
+}
+
+.save-button{
+    background-color: #1f1f7131;
+}
+
+.jot-button{
+    background-color: #15234580;
+    color: white;
+}
+
+.color-picker{
+    min-height: 2em;
+    min-width: 100em;
+}

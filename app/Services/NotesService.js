@@ -1,11 +1,16 @@
 import { appState } from "../AppState.js";
 import { Note } from "../Models/Note.js";
+import { saveState } from "../Utils/Store.js";
 
 
 
 class NotesService {
-constructor(){
-    console.log('hello from the service');
+    createJot(formData) {
+let newJot = new Note(formData)
+console.log(newJot)
+appState.notes.push(newJot)
+saveState('notes', appState.notes)
+appState.emit('notes')
 }
 }
 
