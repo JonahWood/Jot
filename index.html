@@ -34,7 +34,7 @@
 
   <main>
     <div class="container-fluid">
-      <!-- SECTION Top Canvas -->
+      <!-- SECTION Canvas buttons VVVVVVVVVVVVVVVVVVVV-->
       <div class="row">
         <div class="col-10 text-light">
           <div id="app">
@@ -47,10 +47,10 @@
           </div>
         </div>
       </div>
-      <!-- SECTION Right Canvas -->
+      <!-- SECTION Canvas buttons ^^^^^^^^^^^^^^^^^^ -->
       <div class="row">
-        <!-- <div class="col-2 offset-10 text-light">
-          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+        <div class="col-12" id="activeJot"></div>
+      </div>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleColorInput" class="form-label"><h3>Color</h3></label>
-<input type="color" class="form-control form-control-color color-picker" id="exampleColorInput" value="#000000" title="Choose your color">
+<input type="color" class="form-control form-control-color color-picker" id="color" name="color" value="#000000" title="Choose your color">
       </div>
       <button type="submit" class="btn btn-primary">Create</button>
     </form>
@@ -94,8 +94,8 @@
     <h2 class="offcanvas-title" id="offcanvasRightLabel">Jots:</h2>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
-    ...
+  <div class="offcanvas-body" id="jots">
+    
   </div>
 </div>
 

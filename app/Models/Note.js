@@ -7,17 +7,25 @@ export class Note{
 constructor(data) {
     this.id = generateId()
     this.title = data.title || 'New Jot'
-    this.body = data.body
+    this.body = data.body || ''
     this.date = data.date || new Date().toLocaleTimeString('en-US')
     this.color = data.color
 }
 
-get newJotTemp() {
+get jotsTemp() {
+    return `
+    <h3><div>${this.title}</div></h3>
+    <div>${this.date}</div>
+    <button onclick="app.notesController.drawActiveJot()">open</button>
+    `
+}
+
+
+get newJotTemp(){
     return `
     
     `
 }
-
 
 get jotTemp() {
     return `
