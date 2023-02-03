@@ -3,6 +3,7 @@ import { notesService } from "../Services/NotesService.js"
 import { Pop } from "../Utils/Pop.js";
 import { getFormData } from "../Utils/FormHandler.js";
 import { setHTML } from "../Utils/Writer.js";
+import { saveState } from "../Utils/Store.js";
 
 function _drawJots(){
     let note = appState.notes
@@ -24,12 +25,35 @@ export class NotesController {
         _drawJots()
         appState.on('notes', _drawJots)
     }
+
+setActiveJot(jotId){
+try {
+    notesService.setActiveJot(jotId)
+} catch (error) {
+    console.error(error)
+    Pop.error(error.message)
+}
+}
+
+
+
+
 drawActiveJot(){
     _drawActiveJot()
 }
 
 updateJot(){
-    let textArea = document.getElementById
+    try {
+        let textArea = document.getElementById('banana')
+        let updatedBody = textArea.value
+        console.log('it saved the following from the body:', updatedBody);
+        notesService.updateJot(updatedBody)
+        saveState('banana', updatedBody)
+    } catch (error) {
+        console.log(error)
+        Pop.error(error)
+    }
+
 }
 
     createJot(){

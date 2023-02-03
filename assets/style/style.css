@@ -35,3 +35,7 @@ body{
     min-height: 2em;
     min-width: 100em;
 }
+
+.open-button{
+    background-color: #1c8a46b9;
+}

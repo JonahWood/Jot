@@ -9,6 +9,8 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
 
   notes = loadState('notes', [Note])
+
+  activeJot = null
 }
 
 
