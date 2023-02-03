@@ -1,1 +1,9 @@
 /* BASIC STYLES HERE */
+body{
+    /* background: #ffe743; */
+    background: linear-gradient(115deg, #152345 0%, #1c8a46 100%);
+}
+
+.title-font{
+    font-family: 'Caveat', cursive;
+}
