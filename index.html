@@ -78,9 +78,15 @@
         <label for="exampleInputEmail1" class="form-label"><h3>Jot Title</h3></label>
         <input type="text" class="form-control" id="title" name="title" required minlength="3" required maxlength="12" aria-describedby="emailHelp">
       </div>
-      <div class="mb-3">
-        <label for="exampleColorInput" class="form-label"><h3>Color</h3></label>
-<input type="color" class="form-control form-control-color color-picker" id="color" name="color" value="#000000" title="Choose your color">
+      <div>
+        <select class="form-select" aria-label="Default select example"  id="color" name="color">
+          <option selected>Select Color</option>
+          <option value="blue">Blue🟦</option>
+          <option value="green">Green🟩</option>
+          <option value="red">Red🟥</option>
+          <option value="purple">Purple🟪</option>
+          <option value="yellow">Yellow🟨</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Create</button>
     </form>
@@ -91,7 +97,7 @@
 
 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h2 class="offcanvas-title" id="offcanvasRightLabel">Jots:</h2>
+    <h2 class="offcanvas-title" id="offcanvasRightLabel">Jots: ${jots}</h2>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body" id="jots">

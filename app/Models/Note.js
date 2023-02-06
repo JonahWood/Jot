@@ -4,6 +4,8 @@ import { generateId } from "../Utils/generateId.js"
 
 
 export class Note{
+jot = 0
+
 constructor(data) {
     this.id = generateId()
     this.title = data.title || 'New Jot'
@@ -11,6 +13,8 @@ constructor(data) {
     this.date = data.date || new Date().toLocaleTimeString('en-US')
     this.color = data.color
 }
+
+
 
 get jotsTemp() {
     return `
@@ -32,7 +36,7 @@ get newJotTemp(){
 get jotTemp() {
     return `
     <div class="col-7 jot-cont rounded m-auto mt-5 p-2">
-            <h1 class="text-light">
+            <h1 class="color-picker-${this.color}">
                 ${this.title}
             </h1>
             <div class="mb-3 d-flex justify-content-between">

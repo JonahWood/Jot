@@ -6,6 +6,8 @@ import { saveState } from "../Utils/Store.js";
 
 class NotesService {
 
+
+    
     createJot(formData) {
 let newJot = new Note(formData)
 console.log(newJot)
@@ -13,6 +15,7 @@ console.log(newJot)
 appState.notes.push(newJot)
 saveState('notes', appState.notes)
 appState.emit('notes')
+jot++
 }
 
 setActiveJot(jotId) {
@@ -21,6 +24,13 @@ setActiveJot(jotId) {
     appState.activeJot = foundJot
 }
 
+updateJot(updatedBody) {
+    let activeJot = appState.activeJot
+    activeJot.body = updatedBody
+    saveState('notes', appState.notes)
+    console.log(appState.notes);
+    appState.emit('activeJot')
+}
 
 
 

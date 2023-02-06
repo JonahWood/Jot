@@ -44,6 +44,16 @@ export class NotesController {
         }
     }
 
+    updateJot(){
+        try {
+        let textArea = document.getElementById('banana')
+        let updatedBody = textArea.value
+        console.log('it saved the following from the text area:', updatedBody);
+        notesService.updateJot(updatedBody)
+        } catch (error) {
+        console.error(error)
+        Pop.error(error.message)
+    }}
 
 
 

@@ -39,3 +39,15 @@ body{
 .open-button{
     background-color: #1c8a46b9;
 }
+
+.color-picker-blue{
+    color: #0000ff90;
+}.color-picker-red{
+    color: #ff000090;
+}.color-picker-green{
+    color: #00800090;
+}.color-picker-purple{
+    color: #80008090;
+}.color-picker-yellow{
+    color: #dacf0090;
+}
