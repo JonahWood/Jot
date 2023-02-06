@@ -37,14 +37,14 @@ get newJotTemp(){
 
 get jotTemp() {
     return `
-    <div class="col-7 jot-cont rounded m-auto mt-5 p-2">
+    <div class="col-7 jot-cont-${this.color} rounded m-auto mt-5 p-2">
             <h1 class="color-picker-${this.color}">
                 ${this.title}
                 <button class="btn btn-danger square-top" onclick="app.notesController.deleteJot('${this.id}')">🗑️</button>
             </h1>
             <div class="mb-3 d-flex justify-content-between">
             </div>
-            <h3 class="text-light">${this.date} ${this.time}</h3>
+            <h3 class="text-light">Date/Time at creation:</h3><h2 class="color-picker-${this.color}">${this.date} ${this.time}</h2>
             <h1>
             <textarea name="body" id="banana" onblur="app.notesController.updateJot()" class="jot-body">
             ${this.body}

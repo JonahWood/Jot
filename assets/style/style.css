@@ -20,6 +20,21 @@ body{
 .jot-cont{
     background-color: #ff000031;
 }
+.jot-cont-blue{
+    background-color: #0000ff30;
+}
+.jot-cont-red{
+    background-color: #ff000030;
+}
+.jot-cont-green{
+    background-color: #00800030;
+}
+.jot-cont-purple{
+    background-color: #80008030;
+}
+.jot-cont-yellow{
+    background-color: #dacf0030;
+}
 
 .save-button{
     background-color: #1f1f7131;
@@ -41,13 +56,13 @@ body{
 }
 
 .color-picker-blue{
-    color: #0000ff90;
+    color: #000012;
 }.color-picker-red{
-    color: #ff000090;
+    color: #1e0000;
 }.color-picker-green{
-    color: #00800090;
+    color: #001500;
 }.color-picker-purple{
-    color: #80008090;
+    color: #1d001d;
 }.color-picker-yellow{
-    color: #dacf0090;
+    color: #1c1a00;
 }
