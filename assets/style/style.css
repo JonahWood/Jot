@@ -11,8 +11,8 @@ body{
 .jot-body{
     font-family: 'Caveat', cursive;
     background-color: #f7e4ce;
-    min-height: 20em;
-    min-width: 20em;
+    min-height: 10em;
+    min-width: 15em;
     margin: 1em;
     font-weight: 100;
 }
@@ -32,8 +32,8 @@ body{
 }
 
 .color-picker{
-    min-height: 2em;
-    min-width: 100em;
+    min-height: 1em;
+    min-width: 10em;
 }
 
 .open-button{

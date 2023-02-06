@@ -15,18 +15,29 @@ saveState('notes', appState.notes)
 appState.emit('notes')
 }
 
-updateJot(updatedBody){
-let jot = appState.notes
-jot.body = updatedBody
-saveState('notes', appState.notes)
-appState.emit('notes')
-}
-
-setActiveJot(jotId){
+setActiveJot(jotId) {
     let foundJot = appState.notes.find(j => j.id == jotId)
     console.log(foundJot);
     appState.activeJot = foundJot
 }
+
+
+
+
+
+// updateJot(updatedBody){
+// let jot = appState.notes
+// jot.body = updatedBody
+// // appState.jot.push(updatedBody)
+// saveState('notes', appState.notes)
+// appState.emit('notes')
+// }
+
+// setActiveJot(jotId){
+//     let foundJot = appState.notes.find(j => j.id == jotId)
+//     console.log(foundJot);
+//     appState.activeJot = foundJot
+// }
 }
 
 

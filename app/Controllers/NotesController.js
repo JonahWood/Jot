@@ -12,49 +12,73 @@ function _drawJots(){
     setHTML('jots', template)
 }
 
-function _drawActiveJot(){
-    let note = appState.notes
-    let template = ''
-    note.forEach(a => template += a.jotTemp)
-    setHTML('activeJot', template)
+function _drawJot() {
+    let notes = appState.activeJot
+    setHTML('current-jot', notes.jotTemp)
 }
 
+
+
+// function _drawActiveJot(){
+//     let note = appState.notes
+//     let template = ''
+//     // template += ''
+//     note.forEach(a => template += a.jotTemp)
+//     setHTML('activeJot', template)
+// }
 export class NotesController {
     constructor(){
         console.log('hello from the controller');
         _drawJots()
         appState.on('notes', _drawJots)
+        appState.on('activeJot', _drawJot)
     }
 
-setActiveJot(jotId){
-try {
-    notesService.setActiveJot(jotId)
-} catch (error) {
-    console.error(error)
-    Pop.error(error.message)
-}
-}
 
-
-
-
-drawActiveJot(){
-    _drawActiveJot()
-}
-
-updateJot(){
-    try {
-        let textArea = document.getElementById('banana')
-        let updatedBody = textArea.value
-        console.log('it saved the following from the body:', updatedBody);
-        notesService.updateJot(updatedBody)
-        saveState('banana', updatedBody)
-    } catch (error) {
-        console.log(error)
-        Pop.error(error)
+    setActiveJot(jotId) {
+        try {
+        notesService.setActiveJot(jotId)
+        } catch (error) {
+        console.error(error)
+        Pop.error(error.message)
+        }
     }
 
-}
+
+
+
+
+
+    
+    
+    
+    // setActiveJot(jotId){
+    // try {
+    //     notesService.setActiveJot(jotId)
+    // } catch (error) {
+    //     console.error(error)
+    //     Pop.error(error.message)
+    // }
+    // }
+
+// drawActiveJot(){
+//     _drawActiveJot()
+// }
+
+// updateJot(){
+//     try {
+//         let textArea = document.getElementById('banana')
+//         let updatedBody = textArea.value
+//         console.log('it saved the following from the body:', updatedBody);
+//         appState.jot.push(updatedBody)
+//         notesService.updateJot(updatedBody)
+//         saveState('banana', updatedBody)
+//     } catch (error) {
+//         console.log(error)
+//         Pop.error(error)
+//     }
+
+// }
 
     createJot(){
         try {

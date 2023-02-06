@@ -17,7 +17,7 @@ get jotsTemp() {
 <div class="m-3 border-light border-top">
     <h3><div>${this.title}</div></h3>
     <div>${this.date}</div>
-    <button class="open-button" onclick="app.notesController.drawActiveJot()">open</button>
+    <button class="open-button" onclick="app.notesController.setActiveJot('${this.id}')">open</button>
     </div>
     `
 }
