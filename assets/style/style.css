@@ -70,3 +70,23 @@ body{
 .offcanvas-top-jot{
     height:18em !important;
 }
+
+.text-jot-blue{
+color: #0000b5;
+}
+
+.text-jot-green{
+color: #005200;
+}
+
+.text-jot-red{
+color: #ad0000;
+}
+
+.text-jot-purple{
+color: #540054;
+}
+
+.text-jot-yellow{
+color: #646400;
+}

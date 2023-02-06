@@ -12,8 +12,8 @@ constructor(data) {
     this.body = data.body || ''
     this.date = data.date || new Date().toLocaleDateString('en-US')
     this.time = data.time || new Date().toLocaleTimeString('en-US')
+    this.updatedTime = data.updatedTime
     this.color = data.color
-    // this.here = data.here || true
 }
 
 

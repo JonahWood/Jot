@@ -11,6 +11,7 @@ class AppState extends EventEmitter {
   notes = loadState('notes', [Note])
 
   activeJot = null
+  
 }
 
 

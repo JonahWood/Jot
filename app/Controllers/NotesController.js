@@ -17,8 +17,6 @@ function _drawJot() {
     setHTML('current-jot', notes.jotTemp)
 }
 
-
-
 // function _drawActiveJot(){
 //     let note = appState.notes
 //     let template = ''
